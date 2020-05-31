@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    <bean id="userService" class="com.xiajunzhuang.spring.service.impl.UserServiceImpl">-->
+<!--        <property name="username" value="xiajunzhuang"/>-->
+<!--    </bean>-->
+<!--&lt;!&ndash;    <bean id="sbf" class="com.xiajunzhuang.spring.UserServiceStaticFactory" factory-method="createUserService"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    装配factory工厂&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean id="factory" class="com.xiajunzhuang.spring.UserServiceFactory"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean id="userService" factory-bean="factory" factory-method="createUserService"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean id="user1" class="com.xiajunzhuang.spring.bean.User">&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg name="username" value="xiajunzhuang"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg name="pwd" value="3254689xjz"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg name="age" value="21"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean id="user2" class="com.xiajunzhuang.spring.bean.User">&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg index="0" value="zhaichangmei"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg index="1" value="147258zcm"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg index="2" value="21"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+<!--    <bean id="user3" class="com.xiajunzhuang.spring.bean.User">-->
+<!--        <property name="username" value="xiajunzhuang3"/>-->
+<!--        <property name="pwd" value="1234"/>-->
+<!--        <property name="age" value="21"/>-->
+<!--    </bean>-->
+<!--&lt;!&ndash;    <bean id="user4" class="com.xiajunzhuang.spring.bean.User" p:username="xiaxia"&ndash;&gt;-->
+<!--&lt;!&ndash;    p:pwd="12123" p:age="21" p:address-ref="address"/>&ndash;&gt;-->
+<!--    <bean id="user4" class="com.xiajunzhuang.spring.bean.User">-->
+<!--        <property name="username" value="#{'xiajunzhuang'.toUpperCase()}"/>-->
+<!--        <property name="pwd" value="#{T(Math).random()}"/>-->
+<!--        <property name="age" value="#{21}"/>-->
+<!--        <property name="address" value="#{address}"/>-->
+<!--        <property name="courses">-->
+<!--            <list>-->
+<!--                <value>javaee</value>-->
+<!--                <value>javase</value>-->
+<!--                <value>xiajunzhuang</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="cars">-->
+<!--            <set>-->
+<!--                <value>法拉利</value>-->
+<!--                <value>布加迪</value>-->
+<!--                <value>兰博尼基</value>-->
+<!--            </set>-->
+<!--        </property>-->
+<!--        <property name="infos">-->
+<!--            <map>-->
+<!--                <entry key="法拉利" value="120万"/>-->
+<!--                <entry key="布加迪" value="320万"/>-->
+<!--                <entry key="兰博基尼" value="50万"/>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--        <property name="properties">-->
+<!--            <props>-->
+<!--                <prop key="username">mysql</prop>-->
+<!--                <prop key="password">root</prop>-->
+<!--                <prop key="url">jdbc:mysql:///spring</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <bean id="address" class="com.xiajunzhuang.spring.bean.Address">-->
+<!--        <constructor-arg name="province" value="山东省"/>-->
+<!--        <constructor-arg name="city" value="济宁市"/>-->
+<!--    </bean>-->
+<!--    开启注解-->
+    <context:annotation-config/>
+<!--    配置注解包扫描的路径-->
+    <context:component-scan base-package="com.xiajunzhuang.spring"/>
+<!--    <bean id="bookAction" class="com.xiajunzhuang.spring.web.BookAction">-->
+<!--        <property name="bookService" ref="bookService"/>-->
+<!--    </bean>-->
+<!--    <bean id="bookService" class="com.xiajunzhuang.spring.service.impl.BookServiceImpl">-->
+<!--        <property name="iBookDao" ref="iBookDao"/>-->
+<!--    </bean>-->
+<!--    <bean id="iBookDao" class="com.xiajunzhuang.spring.dao.Impl.BookDaoImpl"/>-->
+</beans>
